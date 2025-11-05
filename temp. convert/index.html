@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature  Converter</title>
+    <link rel="stylesheet" href="tempstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1><span>T</span>EMPERATURE CONVERTER<i class="fa-solid fa-temperature-high fa-beat"></i></h1>
+        </div>
+        <div class="box">
+            <div class="icons">
+                <div class="celcius">
+                    <div class="circle1"><i class="fa-regular fa-circle"></i></div>
+                    <div class="c"><i class="fa-solid fa-c"></i></div>
+                </div>
+                <div class="fah">
+                    <div class="circle2"><i class="fa-regular fa-circle"></i></div>
+                    <div class="f"><i class="fa-solid fa-f"></i></div>
+                </div>
+                <div class="kel">
+                    <div class="k"><i class="fa-solid fa-k"></i></div>
+                </div>
+            </div>
+            <form id="calcTemp" onsubmit="calculateTemp();
+            return false">
+            <label for="temp">Enter the Temperature you want to convert with its unit</label>
+            <br>
+            <input type="number" name="temp" id="temp" value="0">
+            <select name="difftemp" id="difftemp">
+                <option value="">Select Unit</option>
+                <option value="cel">&#176;Celcius</option>
+                <option value="fah">&#176;Fahrenheit</option>
+                <option value="kel">Kelvin</option>
+            </select>
+            <br>
+            <label for="temp" style="margin-left: 100px;">Choose the unit you want to convert to</label>
+            <br>
+            <select name="tempconv" id="tempconv" style="margin-left: 260px;">
+                <option value="">Select Unit</option>
+                <option value="cel">&#176;Celcius</option>
+                <option value="fah">&#176;Fahrenheit</option>
+                <option value="kel">Kelvin</option>
+            </select>
+            <br>
+            <input type="submit" name="temp" id="submit">
+            <br>
+            <div class="lower">
+                <div>
+                    <p>Answer:-</p>
+                </div>
+                <div class="res">
+                 <span id="result"></span>
+                </div>
+            </div>
+        </form>
+        </div>   
+    </div>
+ <script src="tempscript.js"></script>   
+</body>
+</html>
